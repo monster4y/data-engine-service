@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+		PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\Repo\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar" />
+	<context id="context1">
+	
+	 <commentGenerator >  
+            <property name="suppressDate" value="true"/>  
+            <property name="suppressAllComments" value="false"/>  
+        </commentGenerator>  
+		<jdbcConnection 
+			connectionURL="jdbc:mysql://127.0.0.1:3306/generator"
+			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
+		<!-- <javaModelGenerator targetPackage="???" targetProject="???" /> <sqlMapGenerator 
+			targetPackage="???" targetProject="???" /> <javaClientGenerator targetPackage="???" 
+			targetProject="???" type="XMLMAPPER" /> <table schema="???" tableName="???"> 
+			<columnOverride column="???" property="???" /> </table> </context> -->
+		<!--生成PO类的位置-->
+		<javaModelGenerator targetPackage="cn.com.cnfic.engine.entity"
+			targetProject="xhcj-data-engine-service/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--生成Mapping的位置-->
+		<sqlMapGenerator targetPackage="cn.com.cnfic.engine.mapping"
+			targetProject="xhcj-data-engine-service/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="cn.com.cnfic.engine.dao"
+							 targetProject="xhcj-data-engine-service/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- <table tableName="data_source" domainObjectName="DataSource" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" />  -->
+		<table tableName="search_define" domainObjectName="SearchDefine" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" />
+		<!-- <table tableName="search_execute" domainObjectName="SearchExecute" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" />   -->	
+
+		<!-- <table tableName="carts" domainObjectName="Carts" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> <table tableName="wxuser" domainObjectName="Wxuser" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="false" selectByExampleQueryId="false" /> <table tableName="user" 
+			domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" 
+			/> -->
+
+		
+		<!-- <table tableName="roles" domainObjectName="Roles" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> <table tableName="rights" domainObjectName="Rights" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="false" selectByExampleQueryId="false" /> <table tableName="roleres" 
+			domainObjectName="RoleResoures" enableCountByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" 
+			/> <table tableName="bamroles" domainObjectName="BamUserRoles" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> -->
+		<!-- <table tableName="expressinfo" domainObjectName="Expressinfo" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> <table tableName="orderaddress" domainObjectName="Orderaddress" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="false" selectByExampleQueryId="false" /> <table tableName="orderinfo" 
+			domainObjectName="Orderinfo" enableCountByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" 
+			/> -->
+
+		 <!--<table tableName="FP_BASINFO" domainObjectName="FpBasicInfo"-->
+			<!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			<!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		 <!--<table tableName="FP_CALENDAR" domainObjectName="FpCalendar"-->
+			<!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			<!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		 <!--<table tableName="FP_COMPANY" domainObjectName="FpCompany"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		 <!--<table tableName="FP_H_PERFORMANCE" domainObjectName="FpHPerformance"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_NEWS" domainObjectName="FpNews"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_NOTICE" domainObjectName="FpNotice"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_REPORT" domainObjectName="FpReport"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_SCR_COMP" domainObjectName="FpScrComp"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_SEARCH_CONDITIONS" domainObjectName="FpSearchConditions"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_SWITCH" domainObjectName="FpSwitch"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_THS" domainObjectName="FpThs"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="FP_DICT" domainObjectName="FpDict"-->
+		<!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+		<!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="V_FP_COMPANY" domainObjectName="VFpCompany"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="V_FP_COMPANYCT" domainObjectName="VFpCompanyCT"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+		<!--<table tableName="V_FP_H_BASINFO" domainObjectName="VFpHBasinfo"-->
+			   <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false" />-->
+		<!-- <table tableName="region" domainObjectName="Region" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> <table tableName="user" domainObjectName="User" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByEmple="false" selectByExampleQueryId="false" /> -->
+
+		<!-- <table tableName="userinfo" domainObjectName="Userinfo" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> -->
+
+		<!-- <table tableName="productIntroduction" domainObjectName="ProductIntroduction" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+
+		<!-- <table tableName="article" domainObjectName="Article" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> -->
+
+		<!-- <table tableName="userlevel" domainObjectName="Userlevel" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> --><!-- <table tableName="producttype" domainObjectName="Producttype" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" /> -->
+
+	</context>
+
+</generatorConfiguration>
